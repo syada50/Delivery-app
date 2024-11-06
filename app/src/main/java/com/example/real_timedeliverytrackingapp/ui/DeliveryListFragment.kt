@@ -12,7 +12,6 @@ import com.example.real_timedeliverytrackingapp.databinding.FragmentDeliveryList
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
-
 class DeliveryListFragment : Fragment() {
 
     private val viewModel: DeliveryViewModel by viewModels()
@@ -30,8 +29,12 @@ class DeliveryListFragment : Fragment() {
 
         // Set up the adapter with navigation action
         adapter = DeliveryAdapter { delivery ->
-            val action = DeliveryListFragmentDirections.actionDeliveryListFragmentToTrackingFragment(delivery.id)
-            findNavController().navigate(action)
+            // Create a Bundle to pass the delivery ID
+            val bundle = Bundle().apply {
+                putString("deliveryId", delivery.id)  // Add the ID to the Bundle
+            }
+            // Use the action ID directly and navigate with the bundle
+            findNavController().navigate(R.id.action_deliveryListFragment_to_trackingFragment, bundle)
         }
 
         // Set up RecyclerView
@@ -56,4 +59,3 @@ class DeliveryListFragment : Fragment() {
         _binding = null // Clear binding reference to avoid memory leaks
     }
 }
-
