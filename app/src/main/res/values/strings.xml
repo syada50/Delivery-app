@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Delivery Tracker</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="register_prompt">Don\'t have an account? Register here</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="track">Track</string>
+    <string name="delivery_id">Delivery ID: %1$s</string>
+    <string name="expected_delivery">Expected Delivery: %1$s</string>
+    <string name="profile">Profile</string>
+    <string name="delivery_vehicle">Delivery Vehicle</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="registration_failed">Registration failed</string>
+    <string name="profile_updated">Profile updated successfully</string>
+    <string name="profile_update_failed">Failed to update profile</string>
+</resources>
